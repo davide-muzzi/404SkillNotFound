@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from "vue";
+import { RouterLink } from "vue-router";
 
 const email = ref("");
 const password = ref("");
@@ -7,6 +8,7 @@ const error = ref("");
 
 async function handleLogin(e) {
   e.preventDefault();
+  console.log("Submitted:", email.value, password.value);
 
   try {
     const res = await fetch("http://localhost:3000/api/login", {
@@ -15,14 +17,17 @@ async function handleLogin(e) {
       body: JSON.stringify({ email: email.value, password: password.value }),
     });
 
-    if (!res.ok) throw new Error("Login failed");
-    const data = await res.json();
+    if (!res.ok) {
+      const errData = await res.json();
+      throw new Error(errData.message || "Login failed");
+    }
 
+    const data = await res.json();
     localStorage.setItem("token", data.token);
     localStorage.setItem("role", data.role);
-
-    alert(`Login success as ${data.role}`);
+    alert(`Login successful: ${data.role}`);
   } catch (err) {
+    console.error("Login error:", err);
     error.value = err.message;
   }
 }
@@ -44,16 +49,16 @@ async function handleLogin(e) {
     </div>
 
     <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-      <form class="space-y-6" @submit="handleLogin">
+      <form class="space-y-6" @submit.prevent="handleLogin">
         <div>
           <label for="email" class="block text-sm/6 font-medium text-gray-900"
             >Email address</label
           >
           <input
+            v-model="email"
             type="email"
             name="email"
             id="email"
-            autocomplete="email"
             required
             class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
           />
@@ -67,10 +72,10 @@ async function handleLogin(e) {
               >Password</label
             >
             <div class="text-sm">
-              <a
-                href="#"
+              <router-link
+                to="/forgotpassword"
                 class="font-semibold text-indigo-600 hover:text-indigo-500"
-                >Forgot password?</a
+                >Forgot password</router-link
               >
             </div>
           </div>
@@ -96,7 +101,7 @@ async function handleLogin(e) {
         </div>
       </form>
       <p v-if="error" class="text-red-600 mt-2">{{ error }}</p>
-      
+
       <p class="mt-10 text-center text-sm/6 text-gray-500">
         Not a member?
         <a href="#" class="font-semibold text-indigo-600 hover:text-indigo-500"

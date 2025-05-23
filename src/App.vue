@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted } from "vue";
+import HomeView from "./components/HomeView.vue";
 
 const message = ref("");
 
@@ -10,14 +11,7 @@ onMounted(async () => {
 });
 </script>
 
-<template>
-  
-  <div class="p-4"><!-- NAVBAR COMES HERE AND SOME OTHER STUFF FOR EVERY PAGE-->
-    <nav class="space-x-4">
-      <router-link to="/" class="text-blue-500" >Home</router-link> 
-      <router-link to="/login" class="text-blue-500">Login</router-link>
-    </nav>
-    <router-view />
-  </div>
-
+<template class="h-max w-full">
+  <div class="origin-top-left-5">logos</div>
+  <HomeView class="h-full w-full"></HomeView>
 </template>
