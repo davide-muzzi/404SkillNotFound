@@ -1,6 +1,8 @@
 <script setup>
 import { ref } from "vue";
 import { RouterLink } from "vue-router";
+import { useRouter } from "vue-router";
+const router = useRouter();
 
 const email = ref("");
 const password = ref("");
@@ -25,7 +27,7 @@ async function handleLogin(e) {
     const data = await res.json();
     localStorage.setItem("token", data.token);
     localStorage.setItem("role", data.role);
-    alert(`Login successful: ${data.role}`);
+    router.push("/");
   } catch (err) {
     console.error("Login error:", err);
     error.value = err.message;
@@ -42,7 +44,7 @@ async function handleLogin(e) {
         alt="Your Company"
       />
       <h2
-        class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900"
+        class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-white"
       >
         Sign in to your account
       </h2>
@@ -51,7 +53,7 @@ async function handleLogin(e) {
     <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
       <form class="space-y-6" @submit.prevent="handleLogin">
         <div>
-          <label for="email" class="block text-sm/6 font-medium text-gray-900"
+          <label for="email" class="block text-sm/6 font-medium text-white"
             >Email address</label
           >
           <input
@@ -66,9 +68,7 @@ async function handleLogin(e) {
 
         <div>
           <div class="flex items-center justify-between">
-            <label
-              for="password"
-              class="block text-sm/6 font-medium text-gray-900"
+            <label for="password" class="block text-sm/6 font-medium text-white"
               >Password</label
             >
             <div class="text-sm">
@@ -102,12 +102,12 @@ async function handleLogin(e) {
       </form>
       <p v-if="error" class="text-red-600 mt-2">{{ error }}</p>
 
-      <p class="mt-10 text-center text-sm/6 text-gray-500">
-        Not a member?
-        <a href="#" class="font-semibold text-indigo-600 hover:text-indigo-500"
-          >Start a 14 day free trial</a
-        >
-      </p>
+      <router-link
+        to="/register"
+        class="font-semibold text-indigo-600 hover:text-indigo-500"
+      >
+        Register here
+      </router-link>
     </div>
   </div>
 </template>

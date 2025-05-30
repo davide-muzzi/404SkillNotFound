@@ -1,8 +1,13 @@
 <script setup>
-import { ref } from 'vue';
-
+import { ref, onMounted } from 'vue';
+import { useRouter } from "vue-router";
 const searchQuery = ref('');
+const isLoggedIn = ref(false);
+const router = useRouter();
 
+onMounted(() => {
+  isLoggedIn.value = !!localStorage.getItem("token");
+});
 function search() {
   console.log('Searching for:', searchQuery.value);
   // later: router.push(`/search?query=${searchQuery.value}`) or emit, etc.
@@ -24,16 +29,21 @@ function search() {
           v-model="searchQuery"
           type="text"
           placeholder="Search..."
-          class="rounded px-3 py-1 text-black placeholder-gray-500"
+          class=" px-3 py-1 text-black placeholder-gray-500 rounded-[2vw]"
         />
         <button
           @click="search"
-          class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded"
+          class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-[2vw]"
         >
           Search
         </button>
       </div>
-      <router-link to="/login" class="text-white bg-gradient-to-r from-purple-500 to-pink-500 rounded px-5 py-1">Login</router-link>
+      <router-link
+      :to="isLoggedIn ? '/account' : '/login'"
+      class="text-white bg-gradient-to-r from-purple-500 to-pink-500 rounded-[2vw] px-5 py-1"
+      >
+      {{ isLoggedIn ? 'Account' : 'Login' }}
+</router-link>
     </nav>
     <RouterView />
   </div>
