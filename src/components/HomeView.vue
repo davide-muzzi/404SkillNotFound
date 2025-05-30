@@ -1,12 +1,7 @@
-<script setup lang="ts">
-import { RouterView } from "vue-router";
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <p>This is the home view</p>
-  <nav class="space-x-4">
-    <router-link to="/" class="text-blue-500">Home</router-link>
-    <router-link to="/login" class="text-blue-500">Login</router-link>
-  </nav>
-  <RouterView></RouterView>
+  <div class="p-4">
+    <p class="text-lg font-semibold">This is the home view</p>
+  </div>
 </template>
