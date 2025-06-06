@@ -5,6 +5,10 @@ import LoginView from "../components/LoginView.vue";
 import ForgotpasswordView from "../components/ForgotPasswordView.vue";
 import RegisterView from "../components/RegisterView.vue";
 import AccountView from "../components/AccountView.vue";
+import RocketLeague from "../views/RocketLeague.vue";
+import LethalCompany from "../views/LethalCompany.vue";
+import Repo from "../views/Repo.vue";
+import Valorant from "../views/Valorant.vue";
 
 const routes = [
   {
@@ -31,6 +35,26 @@ const routes = [
     path: "/account",
     name: "Account",
     component: AccountView,
+  },
+  {
+    path: "/rocketleague",
+    name: "RocketLeague",
+    component: RocketLeague,
+  },
+  {
+    path: "/lethalcompany",
+    name: "LethalCompany",
+    component: LethalCompany,
+  },
+  {
+    path: "/repo",
+    name: "Repo",
+    component: Repo,
+  },
+  {
+    path: "/valorant",
+    name: "valorant",
+    component: Valorant,
   },
 ];
 
