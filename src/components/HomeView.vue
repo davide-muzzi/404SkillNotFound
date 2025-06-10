@@ -16,7 +16,7 @@ import { RouterLink } from "vue-router";
         </div>
 
         <img
-          src="/src/assets/example.png"
+          src="/src/assets/placeholder.png"
           alt="Laptop with characters"
           class="rounded-2xl w-[50%]"
         />
@@ -35,7 +35,7 @@ import { RouterLink } from "vue-router";
           </div>
 
           <img
-            src="/src/assets/examplevalorant.png"
+            src="/src/assets/valorant_homepage.png"
             alt="Valorant Game"
             class="rounded-2xl shadow-lg w-[50%]"
           />
@@ -50,7 +50,7 @@ import { RouterLink } from "vue-router";
         >
           <div>
             <img
-              src="/src/assets/example.png"
+              src="/src/assets/placeholder.png"
               alt="Rocket League"
               class="w-48 h-48 mx-auto rounded-xl mb-3 object-cover"
             />
@@ -69,7 +69,7 @@ import { RouterLink } from "vue-router";
         >
           <div>
             <img
-              src="/src/assets/example.png"
+              src="/src/assets/placeholder.png"
               alt="Rocket League"
               class="w-48 h-48 mx-auto rounded-xl mb-3 object-cover"
             />
@@ -85,7 +85,7 @@ import { RouterLink } from "vue-router";
         >
           <div>
             <img
-              src="/src/assets/example.png"
+              src="/src/assets/placeholder.png"
               alt="Rocket League"
               class="w-48 h-48 mx-auto rounded-xl mb-3 object-cover"
             />
