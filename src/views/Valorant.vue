@@ -17,7 +17,7 @@ const selectedTab = ref("tips"); // default tab
         <div class="text-left">
           <h1 class="text-4xl font-bold mb-3">Valorant</h1>
           <p class="text-lg max-w-md">
-            Tactical shooter meets high-speed ability warfare – where precision
+            Tactical shooter meets high-speed ability warfare - where precision
             and strategy collide.
           </p>
         </div>
@@ -68,7 +68,7 @@ const selectedTab = ref("tips"); // default tab
             <div class="text-left max-w-md">
               <h3 class="font-bold text-md mb-2">Movement Error</h3>
               <p class="text-sm text-gray-300">
-                Don’t move while shooting. Bullets will fire inaccurately.
+                Don't move while shooting. Bullets will fire inaccurately.
               </p>
             </div>
             <div
