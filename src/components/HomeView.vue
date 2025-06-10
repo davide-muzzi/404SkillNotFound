@@ -29,7 +29,7 @@ import { RouterLink } from "vue-router";
           <div class="max-w-sm text-left">
             <h2 class="text-2xl font-bold mb-2">Valorant</h2>
             <p class="text-sm leading-relaxed">
-              Tactical shooter meets high-speed ability warfare – where
+              Tactical shooter meets high-speed ability warfare - where
               precision and strategy collide.
             </p>
           </div>
