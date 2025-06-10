@@ -50,7 +50,7 @@ import { RouterLink } from "vue-router";
         >
           <div>
             <img
-              src="/src/assets/placeholder.png"
+              src="/src/assets/rocketleague_homepage.jpg"
               alt="Rocket League"
               class="w-48 h-48 mx-auto rounded-xl mb-3 object-cover"
             />
@@ -69,7 +69,7 @@ import { RouterLink } from "vue-router";
         >
           <div>
             <img
-              src="/src/assets/placeholder.png"
+              src="/src/assets/lethalcompany_homepage.jpg"
               alt="Rocket League"
               class="w-48 h-48 mx-auto rounded-xl mb-3 object-cover"
             />
@@ -85,7 +85,7 @@ import { RouterLink } from "vue-router";
         >
           <div>
             <img
-              src="/src/assets/placeholder.png"
+              src="/src/assets/repo_homepage.png"
               alt="Rocket League"
               class="w-48 h-48 mx-auto rounded-xl mb-3 object-cover"
             />
