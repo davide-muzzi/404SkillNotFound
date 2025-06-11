@@ -1,14 +1,14 @@
 // src/router/index.js
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../components/HomeView.vue";
-import LoginView from "../components/LoginView.vue";
-import ForgotpasswordView from "../components/ForgotPasswordView.vue";
-import RegisterView from "../components/RegisterView.vue";
-import AccountView from "../components/AccountView.vue";
-import RocketLeague from "../views/RocketLeague.vue";
-import LethalCompany from "../views/LethalCompany.vue";
-import Repo from "../views/Repo.vue";
-import Valorant from "../views/Valorant.vue";
+import HomeView from "../views/HomeView.vue";
+import LoginView from "../views/LoginView.vue";
+import ForgotpasswordView from "../views/ForgotPasswordView.vue";
+import RegisterView from "../views/RegisterView.vue";
+import AccountView from "../views/AccountView.vue";
+import RocketLeague from "../games/RocketLeague.vue";
+import LethalCompany from "../games/LethalCompany.vue";
+import Repo from "../games/Repo.vue";
+import Valorant from "../games/Valorant.vue";
 
 const routes = [
   {

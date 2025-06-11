@@ -13,7 +13,7 @@ function search() {
 
 <template>
   <nav class="p-4 space-x-4 flex items-center justify-between">
-    <img src="../assets/nav_logo.png" alt="Logo" class="w-[60px] h-[60px]" />
+    <img src="../assets/images/nav_logo.png" alt="Logo" class="w-[60px] h-[60px]" />
     <router-link to="/" class="text-white">Home</router-link>
     <router-link to="/games" class="text-white">Games</router-link>
     <router-link to="/about" class="text-white">About</router-link>

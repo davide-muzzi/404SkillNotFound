@@ -20,7 +20,7 @@ const selectedTab = ref("tips"); // default tab
 
         <!-- Image -->
         <img
-          src="../assets/omen.png"
+          src="../assets/images/omen.png"
           alt="Valorant Character"
           class="w-[300px] md:w-[400px]"
         />

@@ -13,7 +13,7 @@ import { RouterLink } from "vue-router";
         </div>
 
         <img
-          src="/src/assets/placeholder.png"
+          src="/src/assets/images/placeholder.png"
           alt="Laptop with characters"
           class="rounded-2xl w-[50%]"
         />
@@ -28,9 +28,9 @@ import { RouterLink } from "vue-router";
           </div>
 
           <img
-            src="/src/assets/valorant_homepage.png"
+            src="/src/assets/images/valorant_homepage.png"
             alt="Valorant Game"
-            class="rounded-2xl shadow-lg w-[50%] hover:scale-105"
+            class="rounded-2xl shadow-lg w-[50%] hover:scale-105 transform transition-transform duration-300"
           />
         </RouterLink>
       </section>
@@ -40,7 +40,7 @@ import { RouterLink } from "vue-router";
         <RouterLink to="/rocketleague" class="transform transition-transform duration-300 hover:scale-105">
           <div>
             <img
-              src="/src/assets/rocketleague_homepage.jpg"
+              src="/src/assets/images/rocketleague_homepage.jpg"
               alt="Rocket League"
               class="w-48 h-48 mx-auto rounded-xl mb-3 object-cover"
             />
@@ -53,7 +53,7 @@ import { RouterLink } from "vue-router";
         <RouterLink to="/lethalcompany" class="transform transition-transform duration-300 hover:scale-105">
           <div>
             <img
-              src="/src/assets/lethalcompany_homepage.jpg"
+              src="/src/assets/images/lethalcompany_homepage.jpg"
               alt="Rocket League"
               class="w-48 h-48 mx-auto rounded-xl mb-3 object-cover"
             />
@@ -66,7 +66,7 @@ import { RouterLink } from "vue-router";
         <RouterLink to="/repo" class="transform transition-transform duration-300 hover:scale-105">
           <div>
             <img
-              src="/src/assets/repo_homepage.png"
+              src="/src/assets/images/repo_homepage.png"
               alt="Rocket League"
               class="w-48 h-48 mx-auto rounded-xl mb-3 object-cover"
             />
