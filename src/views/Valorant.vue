@@ -5,14 +5,10 @@ const selectedTab = ref("tips"); // default tab
 </script>
 
 <template>
-  <div
-    class="min-h-screen flex flex-col justify-center items-center text-white px-6 pt-[70px]"
-  >
+  <div class="min-h-screen flex flex-col justify-center items-center text-white px-6 pt-[70px]">
     <div class="w-full max-w-6xl">
       <!-- Header Section -->
-      <section
-        class="flex flex-col md:flex-row items-center justify-between space-y-10 md:space-y-0"
-      >
+      <section class="flex flex-col md:flex-row items-center justify-between space-y-10 md:space-y-0">
         <!-- Text -->
         <div class="text-left">
           <h1 class="text-4xl font-bold mb-3">Valorant</h1>
@@ -71,17 +67,13 @@ const selectedTab = ref("tips"); // default tab
                 Don't move while shooting. Bullets will fire inaccurately.
               </p>
             </div>
-            <div
-              class="w-full md:w-[400px] h-[220px] bg-gray-400 rounded-lg flex items-center justify-center"
-            >
+            <div class="w-full md:w-[400px] h-[220px] bg-gray-400 rounded-lg flex items-center justify-center">
               <span class="text-4xl text-white">▶</span>
             </div>
           </div>
 
           <!-- Tip 2 -->
-          <div
-            class="flex flex-col md:flex-row justify-between items-start gap-6"
-          >
+          <div class="flex flex-col md:flex-row justify-between items-start gap-6">
             <div class="text-left max-w-md">
               <h3 class="font-bold text-md mb-2">Sunset A-Site Brim Molly</h3>
               <p class="text-sm text-gray-300">
@@ -89,9 +81,7 @@ const selectedTab = ref("tips"); // default tab
                 Time to take effect: 4 sec
               </p>
             </div>
-            <div
-              class="w-full md:w-[400px] h-[220px] bg-gray-400 rounded-lg flex items-center justify-center"
-            >
+            <div class="w-full md:w-[400px] h-[220px] bg-gray-400 rounded-lg flex items-center justify-center">
               <span class="text-4xl text-white">▶</span>
             </div>
           </div>
@@ -100,9 +90,7 @@ const selectedTab = ref("tips"); // default tab
         <!-- Lineups -->
         <div v-if="selectedTab === 'lineups'" class="space-y-12 mt-10">
           <!-- Lineup 1 -->
-          <div
-            class="flex flex-col md:flex-row justify-between items-start gap-6"
-          >
+          <div class="flex flex-col md:flex-row justify-between items-start gap-6">
             <div class="text-left max-w-md">
               <h3 class="font-bold text-md mb-2">Bind A Site - Viper Lineup</h3>
               <p class="text-sm text-gray-300">
@@ -110,17 +98,13 @@ const selectedTab = ref("tips"); // default tab
                 Covers default plant from A Short
               </p>
             </div>
-            <div
-              class="w-full md:w-[400px] h-[220px] bg-gray-400 rounded-lg flex items-center justify-center"
-            >
+            <div class="w-full md:w-[400px] h-[220px] bg-gray-400 rounded-lg flex items-center justify-center">
               <span class="text-4xl text-white">▶</span>
             </div>
           </div>
 
           <!-- Lineup 2 -->
-          <div
-            class="flex flex-col md:flex-row justify-between items-start gap-6"
-          >
+          <div class="flex flex-col md:flex-row justify-between items-start gap-6">
             <div class="text-left max-w-md">
               <h3 class="font-bold text-md mb-2">Ascent B Site - Sova Arrow</h3>
               <p class="text-sm text-gray-300">
@@ -128,9 +112,7 @@ const selectedTab = ref("tips"); // default tab
                 1 charge, 2 bounces
               </p>
             </div>
-            <div
-              class="w-full md:w-[400px] h-[220px] bg-gray-400 rounded-lg flex items-center justify-center"
-            >
+            <div class="w-full md:w-[400px] h-[220px] bg-gray-400 rounded-lg flex items-center justify-center">
               <span class="text-4xl text-white">▶</span>
             </div>
           </div>
