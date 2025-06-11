@@ -9,6 +9,7 @@ import RocketLeague from "../games/RocketLeague.vue";
 import LethalCompany from "../games/LethalCompany.vue";
 import Repo from "../games/Repo.vue";
 import Valorant from "../games/Valorant.vue";
+import AboutView from "../views/AboutView.vue";
 
 const routes = [
   {
@@ -55,6 +56,11 @@ const routes = [
     path: "/valorant",
     name: "valorant",
     component: Valorant,
+  },
+  {
+    path: "/about",
+    name: "About",
+    component: AboutView,
   },
 ];
 
