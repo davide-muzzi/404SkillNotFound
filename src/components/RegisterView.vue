@@ -32,7 +32,7 @@ async function handleRegister(e) {
 
 <template>
   <div
-    class="flex items-center justify-center min-h-screen bg-gradient-to-br from-[#0B0449] to-[#620F5D] px-4"
+    class="flex items-center justify-center  px-4 "
   >
     <form
       @submit="handleRegister"

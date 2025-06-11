@@ -2,6 +2,7 @@
 import { ref } from "vue";
 import { RouterLink } from "vue-router";
 import { useRouter } from "vue-router";
+import { login } from "../stores/auth";
 const router = useRouter();
 
 const email = ref("");
@@ -25,8 +26,8 @@ async function handleLogin(e) {
     }
 
     const data = await res.json();
-    localStorage.setItem("token", data.token);
-    localStorage.setItem("role", data.role);
+    login(data.token);
+    localStorage.setItem("role", data.role); // optional: store role if needed
     router.push("/");
   } catch (err) {
     console.error("Login error:", err);

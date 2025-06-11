@@ -1,5 +1,6 @@
 <script setup>
 import Navigation from './components/Navigation.vue';
+import Footer from './components/Footer.vue';
 import { ref, onMounted } from 'vue';
 import { useRouter } from "vue-router";
 const searchQuery = ref('');
@@ -16,16 +17,9 @@ function search() {
 </script>
 
 <template>
-  <div class="min-h-screen w-full bg-gradient-to-br from-[#0B0449] to-[#620F5D]">
+  <div class="min-h-screen w-full bg-gradient-to-br from-[#0B0449] to-[#620F5D] flex flex-col justify-between">
     <Navigation />
     <RouterView />
-    <footer class="pt-[40px] bottom-0"> 
-      <p class="text-white flex justify-center font-extrabold">404SkillNotFound</p>
-      <div class="flex  justify-between p-8 text-white">
-        <div class="">Terms</div>
-        <div class="">Privacy</div>
-        <div class="">Contact</div>
-      </div>
-    </footer>
+    <Footer />
   </div>
 </template>

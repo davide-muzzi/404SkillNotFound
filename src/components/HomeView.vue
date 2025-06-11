@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { RouterLink } from "vue-router";
+
 </script>
 
 <template>
@@ -20,7 +21,7 @@ import { RouterLink } from "vue-router";
 
       <section>
         <!-- Valorant -->
-        <RouterLink to="/valorant" class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0 transform transition-transform duration-300 hover:scale-105">
+        <RouterLink to="/valorant" class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0 transform transition-transform duration-300 ">
           <div class="max-w-sm text-left">
             <h2 class="text-2xl font-bold mb-2">Valorant</h2>
             <p class="text-sm leading-relaxed">Tactical shooter meets high-speed ability warfare - where precision and strategy collide.</p>
@@ -29,7 +30,7 @@ import { RouterLink } from "vue-router";
           <img
             src="/src/assets/valorant_homepage.png"
             alt="Valorant Game"
-            class="rounded-2xl shadow-lg w-[50%]"
+            class="rounded-2xl shadow-lg w-[50%] hover:scale-105"
           />
         </RouterLink>
       </section>

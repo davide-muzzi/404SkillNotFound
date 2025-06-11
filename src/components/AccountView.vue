@@ -12,7 +12,7 @@ function handleLogout() {
 
 <template>
   <div
-    class="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0B0449] to-[#620F5D]"
+    class="flex items-center justify-center "
   >
     <div class="bg-white p-6 rounded-md text-center shadow-md">
       <h1 class="text-xl font-bold mb-4">Welcome to your Account</h1>
