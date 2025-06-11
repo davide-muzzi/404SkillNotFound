@@ -7,7 +7,9 @@ const searchQuery = ref('');
 const router = useRouter();
 
 function search() {
-  console.log('Searching for:', searchQuery.value);
+  if (searchQuery.value.trim() !== '') {
+    router.push({ path: "/search", query: { q: searchQuery.value } });
+  }
 }
 </script>
 
@@ -19,7 +21,13 @@ function search() {
     <router-link to="/about" class="text-white text-xl font-rajdhani font-medium">About</router-link>
     
     <div class="flex items-center gap-2">
-      <input v-model="searchQuery" type="text" placeholder="Search..." class="px-3 py-1 text-black placeholder-gray-500 rounded-[2vw] text-xl font-rajdhani font-medium" />
+      <input
+        v-model="searchQuery"
+        @keyup.enter="search"
+        type="text"
+        placeholder="Search..."
+        class="px-3 py-1 text-black placeholder-gray-500 rounded-[2vw] text-xl font-rajdhani font-medium"
+      />
       <button @click="search" class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-[2vw] text-xl font-rajdhani font-medium">Search</button>
     </div>
 

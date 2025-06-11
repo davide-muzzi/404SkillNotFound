@@ -27,7 +27,7 @@ async function handleLogin(e) {
 
     const data = await res.json();
     login(data.token);
-    localStorage.setItem("role", data.role); // optional: store role if needed
+    localStorage.setItem("role", data.role); 
     router.push("/");
   } catch (err) {
     console.error("Login error:", err);
@@ -39,16 +39,12 @@ async function handleLogin(e) {
 <template>
   <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
     <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-      <img
-        class="mx-auto h-10 w-auto"
-        src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-        alt="Your Company"
-      />
-      <h2
+      <img src="../assets/images/nav_logo.png" alt="Logo" class="w-[60px] h-[60px] mx-auto " />
+      <h1
         class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-white"
       >
-        Sign in to your account
-      </h2>
+       Login
+      </h1>
     </div>
 
     <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
@@ -58,13 +54,14 @@ async function handleLogin(e) {
             >Email address</label
           >
           <input
-            v-model="email"
-            type="email"
-            name="email"
-            id="email"
-            required
-            class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
-          />
+              v-model="email"
+              type="email"
+              name="email"
+              id="email"
+              required
+              class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none autofill:shadow-[inset_0_0_0px_1000px_white]"
+/>
+
         </div>
 
         <div>
@@ -87,7 +84,7 @@ async function handleLogin(e) {
               name="password"
               id="password"
               required
-              class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+              class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none autofill:shadow-[inset_0_0_0px_1000px_white]"
             />
           </div>
         </div>
@@ -95,7 +92,7 @@ async function handleLogin(e) {
         <div>
           <button
             type="submit"
-            class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            class="flex w-full justify-center rounded-md px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs bg-gradient-to-r from-purple-500 to-pink-500 "
           >
             Sign in
           </button>
@@ -105,9 +102,9 @@ async function handleLogin(e) {
 
       <router-link
         to="/register"
-        class="font-semibold text-indigo-600 hover:text-indigo-500"
+        class="font-semibold text-indigo-600 hover:text-indigo-500 "
       >
-        Register here
+        Don't have an account? Register here
       </router-link>
     </div>
   </div>

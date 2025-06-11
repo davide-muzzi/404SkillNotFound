@@ -11,7 +11,7 @@ import Repo from "../games/Repo.vue";
 import Valorant from "../games/Valorant.vue";
 import AboutView from "../views/AboutView.vue";
 import GamesView from "../views/GamesView.vue";
-
+import SearchView from "../views/SearchView.vue";
 const routes = [
   {
     path: "/",
@@ -68,6 +68,11 @@ const routes = [
     name: "Games",
     component: GamesView,
   },
+  {
+    path: "/search",
+    name: "Search",
+    component: SearchView,
+  }, 
   
 ];
 
