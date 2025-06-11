@@ -10,6 +10,7 @@ import LethalCompany from "../games/LethalCompany.vue";
 import Repo from "../games/Repo.vue";
 import Valorant from "../games/Valorant.vue";
 import AboutView from "../views/AboutView.vue";
+import GamesView from "../views/GamesView.vue";
 
 const routes = [
   {
@@ -62,6 +63,12 @@ const routes = [
     name: "About",
     component: AboutView,
   },
+  {
+    path: "/games",
+    name: "Games",
+    component: GamesView,
+  },
+  
 ];
 
 const router = createRouter({
