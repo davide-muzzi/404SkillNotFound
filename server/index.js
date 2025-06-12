@@ -143,6 +143,37 @@ app.post("/api/submissions/:id/reject", (req, res) => {
   res.json({ message: "Rejected and removed" });
 });
 
+/* ----------------------- Contact ----------------------- */
+const nodemailer = require("nodemailer");
+require("dotenv").config();
+
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
+  }
+});
+app.post("/api/contact", async (req, res) => {
+  const { name, email, message } = req.body;
+  if (!name || !email || !message)
+    return res.status(400).json({ message: "Missing fields" });
+
+  try {
+    await transporter.sendMail({
+      from: `"${name}" <${email}>`,
+      to: "gregoryruoss@gmail.com",
+      subject: "Neue Kontaktanfrage",
+      text: `${message}\n\nVon: ${name} <${email}>`,
+    });
+
+    res.json({ message: "E-Mail erfolgreich gesendet" });
+  } catch (error) {
+    console.error("Fehler beim Senden der E-Mail:", error);
+    res.status(500).json({ message: "Fehler beim Senden der E-Mail" });
+  }
+});
+
 /* -------------------- START SERVER -------------------- */
 app.listen(PORT, () => {
   console.log(`API running at http://localhost:${PORT}`);

@@ -3,7 +3,7 @@ import { RouterLink } from "vue-router";
 </script>
 
 <template>
-  <div class="min-h-screen pt-24 px-6 text-white">
+  <div class="pt-24 flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 text-white">
     <div class="max-w-6xl mx-auto">
       <h1 class="text-4xl font-bold mb-12 text-center">All Games</h1>
 

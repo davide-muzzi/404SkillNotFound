@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-24 min-h-screen px-6">
+  <div class="pt-24 flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 text-white">
     <div class="max-w-4xl mx-auto font-rajdhani">
       <h1 class="text-5xl font-extrabold text-white mb-12 tracking-tight text-center">404SkillNotFound</h1>
 

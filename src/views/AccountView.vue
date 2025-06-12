@@ -53,22 +53,18 @@ function logout() {
 </script>
 
 <template>
-  <!-- 🧭 Navigation -->
   
-  <!-- 👤 Account-Bereich -->
-  <div class="min-h-screen text-white p-6 pt-24 max-w-5xl mx-auto">
+  <div class="p-6 pt-24 max-w-5xl mx-auto flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 text-white">
     <h1 class="text-4xl font-bold mb-6 font-rajdhani">Account</h1>
-
-    <button @click="logout" class="bg-red-600 px-4 py-2 rounded">Logout</button>
-
     <div v-if="userRole === 'admin'" class="mt-8">
       <button
         @click="loadSubmissions"
-        class="bg-gradient-to-r from-yellow-400 to-pink-400 px-5 py-2 rounded-[2vw] text-xl font-rajdhani font-medium"
+        class="bg-gradient-to-r from-yellow-400 to-pink-400 px-5 py-2 rounded text-xl font-rajdhani font-medium"
       >
         Requested Submits
       </button>
     </div>
+    <button @click="logout" class="bg-red-600 px-4 py-2 rounded mt-5">Logout</button>
 
     <div v-if="showSubmissions" class="mt-10">
       <!-- 📥 Admin Review -->

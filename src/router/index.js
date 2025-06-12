@@ -14,6 +14,9 @@ import GamesView from "../views/GamesView.vue";
 import SearchView from "../views/SearchView.vue";
 import SubmitTipLineup from "../views/SubmitTipLineup.vue";
 import SubmitView from "../views/SubmitView.vue";
+import Contact from "../Footer/Contact.vue";
+import Terms from "../Footer/Terms.vue";
+import Privacy from "../Footer/Privacy.vue";
 
 const routes = [
   {
@@ -85,8 +88,22 @@ const routes = [
     path: "/submit",
     name: "Submit",
     component: SubmitView,
+  },
+  {
+    path: "/contact",
+    name: "Contact",
+    component: Contact,
+  },
+  {
+    path: "/terms",
+    name: "Terms",
+    component: Terms,
+  },
+  {
+    path: "/privacy",
+    name: "Privacy",
+    component: Privacy,
   }
-  
 ];
 
 const router = createRouter({

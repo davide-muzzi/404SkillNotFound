@@ -33,12 +33,12 @@ async function submit() {
 </script>
 
 <template>
-  <div class="min-h-screen pt-24 px-6 text-white max-w-3xl mx-auto">
+  <div class=" pt-24 max-w-3xl mx-auto flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 text-white">
     <h1 class="text-3xl font-bold mb-6">Submit a Tip or Lineup</h1>
     <div class="space-y-4">
       <input v-model="title" placeholder="Title" class="w-full px-3 py-2 rounded text-black" />
       <textarea v-model="description" placeholder="Description" class="w-full px-3 py-2 rounded text-black"></textarea>
-
+    <div class="flex items-center space-x-4">
       <select v-model="type" class="px-3 py-2 rounded text-black">
         <option value="tip">Tip</option>
         <option value="lineup">Lineup</option>
@@ -48,5 +48,6 @@ async function submit() {
 
       <button @click="submit" class="bg-purple-600 px-6 py-2 rounded">Submit</button>
     </div>
+  </div>
   </div>
 </template>

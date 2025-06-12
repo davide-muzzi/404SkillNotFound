@@ -20,7 +20,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="min-h-screen flex flex-col justify-center items-center text-white px-6 pt-[70px]">
+  <div class="items-center text-white pt-[70px] flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
     <div class="w-full max-w-6xl">
       <!-- Header Section -->
       <section class="flex flex-col md:flex-row items-center justify-between space-y-10 md:space-y-0">
