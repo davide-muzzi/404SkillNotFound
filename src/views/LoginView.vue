@@ -39,20 +39,13 @@ async function handleLogin(e) {
 <template>
   <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
     <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-      <img src="../assets/images/nav_logo.png" alt="Logo" class="w-[60px] h-[60px] mx-auto " />
-      <h1
-        class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-white"
-      >
-       Login
-      </h1>
+      <h1 class="text-center text-2xl/9 font-bold tracking-tight text-white">Login</h1>
     </div>
 
     <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
       <form class="space-y-6" @submit.prevent="handleLogin">
         <div>
-          <label for="email" class="block text-sm/6 font-medium text-white"
-            >Email address</label
-          >
+          <label for="email" class="block text-sm/6 font-medium text-white mb-2">Email address</label>
           <input
               v-model="email"
               type="email"
@@ -60,19 +53,16 @@ async function handleLogin(e) {
               id="email"
               required
               class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none autofill:shadow-[inset_0_0_0px_1000px_white]"
-/>
-
+          />
         </div>
 
         <div>
           <div class="flex items-center justify-between">
-            <label for="password" class="block text-sm/6 font-medium text-white"
-              >Password</label
-            >
+            <label for="password" class="block text-sm/6 font-medium text-white">Password</label>
             <div class="text-sm">
               <router-link
                 to="/forgotpassword"
-                class="font-semibold text-indigo-600 hover:text-indigo-500"
+                class="font-semibold text-indigo-600 hover:text-indigo-500 text-sm/6"
                 >Forgot password</router-link
               >
             </div>
@@ -90,9 +80,9 @@ async function handleLogin(e) {
         </div>
 
         <div>
-          <button
+          <button 
             type="submit"
-            class="flex w-full justify-center rounded-md px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs bg-gradient-to-r from-purple-500 to-pink-500 "
+            class="flex w-full justify-center rounded-md px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs bg-gradient-to-r from-purple-500 to-pink-500 mb-2"
           >
             Sign in
           </button>
@@ -102,7 +92,7 @@ async function handleLogin(e) {
 
       <router-link
         to="/register"
-        class="font-semibold text-indigo-600 hover:text-indigo-500 "
+        class="font-semibold text-indigo-600 hover:text-indigo-500 text-sm/6"
       >
         Don't have an account? Register here
       </router-link>
