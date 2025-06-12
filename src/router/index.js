@@ -12,6 +12,9 @@ import Valorant from "../games/Valorant.vue";
 import AboutView from "../views/AboutView.vue";
 import GamesView from "../views/GamesView.vue";
 import SearchView from "../views/SearchView.vue";
+import SubmitTipLineup from "../views/SubmitTipLineup.vue";
+import SubmitView from "../views/SubmitView.vue";
+
 const routes = [
   {
     path: "/",
@@ -73,6 +76,16 @@ const routes = [
     name: "Search",
     component: SearchView,
   }, 
+  {
+    path: "/submit",
+    name: "SubmitTipLineup",
+    component: SubmitTipLineup,
+  },
+  {
+    path: "/submit",
+    name: "Submit",
+    component: SubmitView,
+  }
   
 ];
 

@@ -8,7 +8,7 @@ import { RouterLink } from "vue-router";
     <div class="w-full max-w-6xl space-y-20">
       <section class="flex flex-col md:flex-row items-center justify-between space-y-10 md:space-y-0">
         <div class="text-left">
-          <h1 class="text-5xl font-bold mb-3 font-rajdhani font-medium">404SkillNotFound</h1>
+          <h1 class="text-5xl font-bold mb-3 font-rajdhani ">404SkillNotFound</h1>
           <p class="text-xl font-rajdhani font-medium">Your #1 Guide to improve you Skills.</p>
         </div>
 

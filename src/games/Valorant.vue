@@ -1,7 +1,22 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
+import axios from "axios";
 
-const selectedTab = ref("tips"); // default tab
+const selectedTab = ref("tips");
+
+const acceptedTips = ref([]);
+const acceptedLineups = ref([]);
+
+onMounted(async () => {
+  try {
+    const response = await axios.get("http://localhost:3000/api/accepted");
+    acceptedTips.value = response.data.filter((entry) => entry.type === "tip");
+    acceptedLineups.value = response.data.filter((entry) => entry.type === "lineup");
+  } catch (error) {
+    console.error("Fehler beim Laden der Tipps/Lineups:", error);
+  }
+});
+
 </script>
 
 <template>
@@ -57,56 +72,69 @@ const selectedTab = ref("tips"); // default tab
       <div class="mt-12 space-y-6">
         <!-- Tips & Tricks -->
         <div v-if="selectedTab === 'tips'" class="space-y-12 mt-10">
-          <!-- Tip 1 -->
-          <div
-            class="flex flex-col md:flex-row justify-between items-start gap-6"
-          >
-            <div class="text-left max-w-md">
-              <h3 class="font-bold text-xl mb-2 font-rajdhani">Movement Error</h3>
-              <p class="text-lg text-gray-300 font-rajdhani">Don't move while shooting. Bullets will fire inaccurately.</p>
-            </div>
-            <div class="w-full md:w-[400px] h-[220px] bg-gray-400 rounded-lg flex items-center justify-center">
-              <span class="text-4xl text-white">▶</span>
-            </div>
-          </div>
+  <div
+    v-for="tip in acceptedTips"
+    :key="tip.id"
+    class="flex flex-col md:flex-row justify-between items-start gap-6"
+  >
+    <div class="text-left max-w-md">
+      <h3 class="font-bold text-xl mb-2 font-rajdhani">{{ tip.title }}</h3>
+      <p class="text-lg text-gray-300 font-rajdhani">{{ tip.description }}</p>
+    </div>
+    <div class="w-full md:w-[400px] h-[220px]">
+      <video
+        v-if="tip.mediaUrl.endsWith('.mp4')"
+        :src="tip.mediaUrl"
+        controls
+        class="w-full h-full rounded-lg object-cover"
+      />
+      <img
+        v-else
+        :src="tip.mediaUrl"
+        alt="tip media"
+        class="w-full h-full rounded-lg object-cover"
+      />
+    </div>
+  </div>
+</div>
 
-          <!-- Tip 2 -->
-          <div class="flex flex-col md:flex-row justify-between items-start gap-6">
-            <div class="text-left max-w-md">
-              <h3 class="font-bold text-xl mb-2 font-rajdhani">Sunset A-Site Brim Molly</h3>
-              <p class="text-lg text-gray-300 font-rajdhani">Execution: Post-Plant<br />Time to take effect: 4 sec</p>
-            </div>
-            <div class="w-full md:w-[400px] h-[220px] bg-gray-400 rounded-lg flex items-center justify-center">
-              <span class="text-4xl text-white">▶</span>
-            </div>
-          </div>
-        </div>
 
         <!-- Lineups -->
         <div v-if="selectedTab === 'lineups'" class="space-y-12 mt-10">
-          <!-- Lineup 1 -->
-          <div class="flex flex-col md:flex-row justify-between items-start gap-6">
-            <div class="text-left max-w-md">
-              <h3 class="font-bold text-xl mb-2 font-rajdhani">Bind A Site - Viper Lineup</h3>
-              <p class="text-lg text-gray-300 font-rajdhani">Execution: Post-Plant<br />Covers default plant from A Short</p>
-            </div>
-            <div class="w-full md:w-[400px] h-[220px] bg-gray-400 rounded-lg flex items-center justify-center">
-              <span class="text-4xl text-white">▶</span>
-            </div>
-          </div>
+  <div
+    v-for="lineup in acceptedLineups"
+    :key="lineup.id"
+    class="flex flex-col md:flex-row justify-between items-start gap-6"
+  >
+    <div class="text-left max-w-md">
+      <h3 class="font-bold text-xl mb-2 font-rajdhani">{{ lineup.title }}</h3>
+      <p class="text-lg text-gray-300 font-rajdhani">{{ lineup.description }}</p>
+    </div>
+    <div class="w-full md:w-[400px] h-[220px]">
+      <video
+        v-if="lineup.mediaUrl.endsWith('.mp4')"
+        :src="lineup.mediaUrl"
+        controls
+        class="w-full h-full rounded-lg object-cover"
+      />
+      <img
+        v-else
+        :src="lineup.mediaUrl"
+        alt="lineup media"
+        class="w-full h-full rounded-lg object-cover"
+      />
+    </div>
+  </div>
+</div>
 
-          <!-- Lineup 2 -->
-          <div class="flex flex-col md:flex-row justify-between items-start gap-6">
-            <div class="text-left max-w-md">
-              <h3 class="font-bold text-xl mb-2 font-rajdhani">Ascent B Site - Sova Arrow</h3>
-              <p class="text-lg text-gray-300 font-rajdhani">Info dart on back site from Mid<br />1 charge, 2 bounces</p>
-            </div>
-            <div class="w-full md:w-[400px] h-[220px] bg-gray-400 rounded-lg flex items-center justify-center">
-              <span class="text-4xl text-white">▶</span>
-            </div>
-          </div>
-        </div>
       </div>
+      <div class="flex justify-center mt-20 mb-10">
+  <router-link to="/submit">
+    <button class="bg-gradient-to-r from-purple-600 to-pink-500 text-white px-8 py-3 rounded-full font-bold hover:scale-105 transition font-rajdhani">
+      Add Tip or Lineup
+    </button>
+  </router-link>
+</div>
     </div>
   </div>
 </template>
