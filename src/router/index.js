@@ -17,7 +17,8 @@ import SubmitView from "../views/SubmitView.vue";
 import Contact from "../Footer/Contact.vue";
 import Terms from "../Footer/Terms.vue";
 import Privacy from "../Footer/Privacy.vue";
-
+import Phasmophobia from "../games/Phasmophobia.vue";
+import LeagueofLegends from "../games/LeagueofLegends.vue";
 const routes = [
   {
     path: "/",
@@ -78,7 +79,7 @@ const routes = [
     path: "/search",
     name: "Search",
     component: SearchView,
-  }, 
+  },
   {
     path: "/submit",
     name: "SubmitTipLineup",
@@ -103,7 +104,17 @@ const routes = [
     path: "/privacy",
     name: "Privacy",
     component: Privacy,
-  }
+  },
+  {
+    path: "/phasmophobia",
+    name: "Phasmophobia",
+    component: Phasmophobia,
+  },
+  {
+    path: "/leageoflegends",
+    name: "Leage of Legends",
+    component: LeagueofLegends,
+  },
 ];
 
 const router = createRouter({
