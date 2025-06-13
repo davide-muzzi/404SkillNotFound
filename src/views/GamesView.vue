@@ -71,8 +71,8 @@ import { RouterLink } from "vue-router";
             alt="PHASMAPHOBIA"
             class="w-48 h-48 mx-auto rounded-xl mb-3 object-cover"
           />
-          <h3 class="text-lg font-semibold">Phasmaphobia</h3>
-          <p class="text-sm text-gray-300">SHIVER ME TIMBERS</p>
+          <h3 class="text-lg font-semibold">Phasmophobia</h3>
+          <p class="text-sm text-gray-300">Ghost hunting under pressure</p>
         </div>
 
         <!-- Example Game 2 -->
@@ -82,8 +82,8 @@ import { RouterLink } from "vue-router";
             alt="League of Legends"
             class="w-48 h-48 mx-auto rounded-xl mb-3 object-cover"
           />
-          <h3 class="text-lg font-semibold">LEAGE OF LEGENDS</h3>
-          <p class="text-sm text-gray-300">HELP ME</p>
+          <h3 class="text-lg font-semibold">League of Legends</h3>
+          <p class="text-sm text-gray-300">Team fights, tactics, triumph</p>
         </div>
       </section>
     </div>
