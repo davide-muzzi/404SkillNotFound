@@ -3,12 +3,14 @@
 
     "nav_games": "Games",
     "all_games": "All Games",
-    "valorant_description_short": "Strategy and ability warfare",
-    "rocketleague_description_short": "Where aerial flips decide victory",
-    "lethalcompany_description_short": "Teamwork or terror",
-    "repo_description_short": "Collect, extract, repeat",
-    "phasmophobia_description_short": "Ghost hunting under pressure",
-    "lol_description_short": "Team fights, tactics, triumph",
+    "game_valorant_description_short": "Strategy and ability warfare",
+    "game_rocketleague_description_short": "Where aerial flips decide victory",
+    "game_lethalcompany_description_short": "Teamwork or terror",
+    "game_repo_description_short": "Collect, extract, repeat",
+    "game_phasmophobia_description_short": "Ghost hunting under pressure",
+    "game_lol_description_short": "Team fights, tactics, triumph",
+
+    "game_valorant_description_long": "Tactical shooter meets high-speed ability warfare - where precision and strategy collide.",
 
     "tips_tricks": "Tips & Tricks",
     "lineups": "Lineups",
@@ -19,12 +21,10 @@
     "tip_lineup_submission_title_placeholder": "Title",
     "tip_lineup_submission_description_placeholder": "Description",
     "tip_lineup_file_selection_button": "Select file",
-    "tip_lineup_file_selection_error": "No file selected",
+    "tip_lineup_no_file_error": "No file selected",
     "tip_lineup_submission_button": "Submit",
     "tip_lineup_submission_success": "Submitted for review!",
     "tip_lineup_submission_error": "Failed to submit",
-
-    "valorant_description_long": "Tactical shooter meets high-speed ability warfare - where precision and strategy collide.",
 
     "nav_about": "About",
     "about_tagline": "Your new favorite hub for improving your gameplay across a variety of strategy and team-based games.",
@@ -54,7 +54,7 @@
 
     "login": "Login",
     "email_address": "Email Address",
-    "password": "password",
+    "password": "Password",
     "forgot_password": "Forgot Password",
     "sign_in": "Sign in",
     "auth_register_prompt": "Don't have an account yet? Register here",
