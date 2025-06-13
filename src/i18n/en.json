@@ -1,0 +1,69 @@
+{
+    "homepage_subtitle": "Your #1 Guide to Improve your Skills.",
+
+    "nav_games": "Games",
+    "all_games": "All Games",
+    "valorant_description_short": "Strategy and ability warfare",
+    "rocketleague_description_short": "Where aerial flips decide victory",
+    "lethalcompany_description_short": "Teamwork or terror",
+    "repo_description_short": "Collect, extract, repeat",
+    "phasmophobia_description_short": "Ghost hunting under pressure",
+    "lol_description_short": "Team fights, tactics, triumph",
+
+    "tips_tricks": "Tips & Tricks",
+    "lineups": "Lineups",
+    "lineup_singular": "Lineup",
+    "tip_singular": "Tip",
+    "tip_lineup_add_button": "Add Tip or Lineup",
+    "tip_lineup_submission_title": "Submit a Tip or Lineup",
+    "tip_lineup_submission_title_placeholder": "Title",
+    "tip_lineup_submission_description_placeholder": "Description",
+    "tip_lineup_file_selection_button": "Select file",
+    "tip_lineup_file_selection_error": "No file selected",
+    "tip_lineup_submission_button": "Submit",
+    "tip_lineup_submission_success": "Submitted for review!",
+    "tip_lineup_submission_error": "Failed to submit",
+
+    "valorant_description_long": "Tactical shooter meets high-speed ability warfare - where precision and strategy collide.",
+
+    "nav_about": "About",
+    "about_tagline": "Your new favorite hub for improving your gameplay across a variety of strategy and team-based games.",
+    "about_intro": "We created this platform with one goal: Bring together scattered gaming knowledge into one clear, helpful, and easy-to-use site. Whether you're looking for tips, lineups, mechanics, or game-specific guides - we've got you covered.",
+
+    "about_mission_title": "Our Mission",
+    "about_mission_point1": "Clear and up-to-date guides to improve your skills",
+    "about_mission_point2": "A clean, user-friendly website experience",
+    "about_mission_point3": "A place to share and explore community-created game templates",
+    "about_mission_point4": "A focus on strategy and team-play games, not cheats or hacks",
+
+    "about_difference_title": "What Makes Us Different?",
+    "about_difference_point1": "Community-Driven Ideas: Suggest and rate game templates",
+    "about_difference_point2": "Customizable Layouts: Dark mode, favorites, and personal flair",
+    "about_difference_point3": "Optional Premium Access: For deep-dive guides and exclusive content",
+    "about_difference_point4": "Multilingual Support: Available in German, English, and French",
+
+    "about_who_title": "Who Are We?",
+    "about_who_description": "We're two students, turning our passion for gaming and development into a real product. Backed by a clear project plan, real stakeholder analysis, and risk management, this isn't just a school project - it's a growing platform for gamers, by gamers.",
+
+    "about_involved_title": "Want to Get Involved?",
+    "about_involved_description": "Share your own tips, rate existing guides, or just enjoy the content.",
+    "about_involved_callToAction": "Together, we grow better at the games we love.",
+
+    "nav_search_placeholder": "Search...",
+    "nav_search": "Search",
+
+    "login": "Login",
+    "email_address": "Email Address",
+    "password": "password",
+    "forgot_password": "Forgot Password",
+    "sign_in": "Sign in",
+    "auth_register_prompt": "Don't have an account yet? Register here",
+    "register": "Register",
+    "auth_login_prompt": "Already have an account? Sign in here",
+    "account": "Account",
+    "logout": "Logout",
+
+    "footer_contact": "Contact",
+    "footer_terms": "Terms",
+    "footer_privacy": "Privacy"
+}
