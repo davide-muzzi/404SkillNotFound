@@ -1,8 +1,8 @@
 [
   {
-    "id": 1749745234990,
-    "email": "newaccount@gmail.com",
-    "passwordHash": "$2b$10$OKj11sBUmkCdg2lfDNflHeRa0KEjQ.bj//0zoBRO.E7VOvLGYXi1q",
-    "role": "user"
+    "id": 1749804061277,
+    "email": "adminaccount@example.com",
+    "passwordHash": "$2b$10$vsXSKsplJsyODs3czmy5DepnS3bTINfrCpP00lO3rRtN1qm25C9Xy",
+    "role": "admin"
   }
 ]

@@ -32,7 +32,6 @@ const users = readJson(USERS_FILE);
 const submissions = [];
 const acceptedSubmissions = readJson(ACCEPTED_FILE);
 
-// 📁 Upload-Storage konfigurieren
 const storage = multer.diskStorage({
   destination: (req, file, cb) => cb(null, "uploads/"),
   filename: (req, file, cb) =>
@@ -42,7 +41,7 @@ const upload = multer({ storage });
 
 app.use(cors());
 app.use(express.json());
-app.use("/uploads", express.static("uploads")); // Medienzugriff via URL
+app.use("/uploads", express.static("uploads"));
 
 /* -------------------- LOGIN -------------------- */
 app.post("/api/login", (req, res) => {
@@ -63,14 +62,15 @@ app.post("/api/login", (req, res) => {
 /* -------------------- REGISTER -------------------- */
 app.post("/api/register", (req, res) => {
   const { email, password } = req.body;
-  if (!email || !password) return res.status(400).json({ message: "Missing data" });
+  if (!email || !password)
+    return res.status(400).json({ message: "Missing data" });
 
   const exists = users.find((u) => u.email === email);
   if (exists) return res.status(409).json({ message: "User already exists" });
 
   const passwordHash = bcrypt.hashSync(password, 10);
   users.push({ id: Date.now(), email, passwordHash, role: "user" });
-  writeJson(USERS_FILE, users); // 💾 Save user to JSON
+  writeJson(USERS_FILE, users);
 
   res.json({ message: "User registered successfully" });
 });
@@ -130,7 +130,7 @@ app.post("/api/submissions/:id/accept", (req, res) => {
 
   submission.status = "accepted";
   acceptedSubmissions.push(submission);
-  writeJson(ACCEPTED_FILE, acceptedSubmissions); 
+  writeJson(ACCEPTED_FILE, acceptedSubmissions);
 
   res.json({ message: "Accepted", submission });
 });
@@ -152,7 +152,7 @@ const transporter = nodemailer.createTransport({
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
-  }
+  },
 });
 app.post("/api/contact", async (req, res) => {
   const { name, email, message } = req.body;
