@@ -3,9 +3,9 @@ import { RouterLink } from "vue-router";
 </script>
 
 <template>
-  <div class="pt-24 flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 text-white">
+  <div class="pt-24 flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 text-white font-rajdhani">
     <div class="max-w-6xl mx-auto">
-      <h1 class="text-4xl font-bold mb-12 text-center">All Games</h1>
+      <h1 class="text-5xl font-bold mb-12 text-center">All Games</h1>
 
       <!-- First row -->
       <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 text-center mb-16">
@@ -17,8 +17,8 @@ import { RouterLink } from "vue-router";
               alt="Rocket League"
               class="w-48 h-48 mx-auto rounded-xl mb-3 object-cover"
             />
-            <h3 class="text-lg font-semibold">Rocket League</h3>
-            <p class="text-sm text-gray-300">Where aerial flips decide victory</p>
+            <h3 class="text-xl font-semibold">Rocket League</h3>
+            <p class="text-lg text-gray-300">Where aerial flips decide victory</p>
           </div>
         </RouterLink>
 
@@ -30,8 +30,8 @@ import { RouterLink } from "vue-router";
               alt="Lethal Company"
               class="w-48 h-48 mx-auto rounded-xl mb-3 object-cover"
             />
-            <h3 class="text-lg font-semibold">Lethal Company</h3>
-            <p class="text-sm text-gray-300">Teamwork or terror</p>
+            <h3 class="text-xl font-semibold">Lethal Company</h3>
+            <p class="text-lg text-gray-300">Teamwork or terror</p>
           </div>
         </RouterLink>
 
@@ -43,8 +43,8 @@ import { RouterLink } from "vue-router";
               alt="R.E.P.O"
               class="w-48 h-48 mx-auto rounded-xl mb-3 object-cover"
             />
-            <h3 class="text-lg font-semibold">R.E.P.O</h3>
-            <p class="text-sm text-gray-300">Collect, extract, repeat</p>
+            <h3 class="text-xl font-semibold">R.E.P.O</h3>
+            <p class="text-lg text-gray-300">Collect, extract, repeat</p>
           </div>
         </RouterLink>
       </section>
@@ -59,8 +59,8 @@ import { RouterLink } from "vue-router";
               alt="Valorant"
               class="w-48 h-48 mx-auto rounded-xl mb-3 object-cover"
             />
-            <h3 class="text-lg font-semibold">Valorant</h3>
-            <p class="text-sm text-gray-300">Strategy and ability warfare</p>
+            <h3 class="text-xl font-semibold">Valorant</h3>
+            <p class="text-lg text-gray-300">Strategy and ability warfare</p>
           </div>
         </RouterLink>
 
@@ -71,8 +71,8 @@ import { RouterLink } from "vue-router";
             alt="PHASMAPHOBIA"
             class="w-48 h-48 mx-auto rounded-xl mb-3 object-cover"
           />
-          <h3 class="text-lg font-semibold">Phasmophobia</h3>
-          <p class="text-sm text-gray-300">Ghost hunting under pressure</p>
+          <h3 class="text-xl font-semibold">Phasmophobia</h3>
+          <p class="text-lg text-gray-300">Ghost hunting under pressure</p>
         </div>
 
         <!-- Example Game 2 -->
@@ -82,8 +82,8 @@ import { RouterLink } from "vue-router";
             alt="League of Legends"
             class="w-48 h-48 mx-auto rounded-xl mb-3 object-cover"
           />
-          <h3 class="text-lg font-semibold">League of Legends</h3>
-          <p class="text-sm text-gray-300">Team fights, tactics, triumph</p>
+          <h3 class="text-xl font-semibold">League of Legends</h3>
+          <p class="text-lg text-gray-300">Team fights, tactics, triumph</p>
         </div>
       </section>
     </div>

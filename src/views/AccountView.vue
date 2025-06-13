@@ -64,7 +64,7 @@ function logout() {
         Requested Submits
       </button>
     </div>
-    <button @click="logout" class="bg-red-600 px-4 py-2 rounded mt-5">Logout</button>
+    <button @click="logout" class="bg-red-600 px-4 py-2 rounded mt-5 font-rajdhani text-lg font-medium">Logout</button>
 
     <div v-if="showSubmissions" class="mt-10">
       <!-- 📥 Admin Review -->
@@ -88,9 +88,9 @@ function logout() {
           />
         </div>
         <div class="flex gap-4 mt-4">
-          <button @click="accept(selected.id)" class="bg-green-500 px-4 py-2 rounded">Accept</button>
-          <button @click="reject(selected.id)" class="bg-red-500 px-4 py-2 rounded">Reject</button>
-          <button @click="selected = null" class="bg-gray-500 px-4 py-2 rounded">Back</button>
+          <button @click="accept(selected.id)" class="bg-green-500 px-4 py-2 rounded font-rajdhani">Accept</button>
+          <button @click="reject(selected.id)" class="bg-red-500 px-4 py-2 rounded font-rajdhani">Reject</button>
+          <button @click="selected = null" class="bg-gray-500 px-4 py-2 rounded font-rajdhani">Back</button>
         </div>
       </div>
 
@@ -101,8 +101,8 @@ function logout() {
           @click="selected = submission"
           class="bg-gray-700 p-4 rounded-xl cursor-pointer hover:scale-105 transition"
         >
-          <h3 class="text-xl font-semibold">{{ submission.title }}</h3>
-          <p class="text-sm text-gray-300">{{ submission.type }}</p>
+          <h3 class="text-xl font-semibold font-rajdhani">{{ submission.title }}</h3>
+          <p class="text-sm text-gray-300 font-rajdhani">{{ submission.type }}</p>
         </div>
       </div>
     </div>
