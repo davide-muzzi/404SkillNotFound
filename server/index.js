@@ -173,6 +173,13 @@ app.post("/api/contact", async (req, res) => {
     res.status(500).json({ message: "Fehler beim Senden der E-Mail" });
   }
 });
+app.post("/api/forgot-password", (req, res) => {
+  const { email } = req.body;
+  if (!email) return res.status(400).json({ message: "Missing email" });
+
+  console.log(`Password reset requested for: ${email}`);
+  res.json({ message: "If this email exists, a reset link has been sent." });
+});
 
 /* -------------------- START SERVER -------------------- */
 app.listen(PORT, () => {

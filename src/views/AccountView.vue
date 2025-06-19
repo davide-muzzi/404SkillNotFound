@@ -48,7 +48,7 @@ async function reject(id) {
 function logout() {
   localStorage.removeItem("token");
   localStorage.removeItem("role");
-  window.location.reload();
+  router.push("/login")
 }
 </script>
 

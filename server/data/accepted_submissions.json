@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "id": 1750359243110,
+    "title": "Play to win, not to impress.",
+    "description": "You don’t have to take every fight. If you're low on health, out of utility, or outnumbered, falling back is often the winning move. Don’t let your ego force a peek just to prove something — Valorant is a team game, not a 1v5 simulator.",
+    "mediaUrl": "http://localhost:3000/uploads/1750359242560.mp4",
+    "type": "tip",
+    "status": "accepted"
+  },
+  {
+    "id": 1750360223478,
+    "title": "Guns win fights, but utility wins rounds.",
+    "description": "Don’t hoard your flashes, smokes, or mollies. You bought your util to use it — not to flex your credits. One well-timed flash or smoke can win a site, save a teammate, or stop a push.\r\n\r\nWasting utility is better than dying with it unused.\r\nUse it early, use it smart, use it together.",
+    "mediaUrl": "http://localhost:3000/uploads/1750360223201.mp4",
+    "type": "tip",
+    "status": "accepted"
+  },
+  {
+    "id": 1750363279713,
+    "title": "Cypher B site Trip + cam",
+    "description": "Split",
+    "mediaUrl": "http://localhost:3000/uploads/1750363279358.mp4",
+    "type": "lineup",
+    "status": "accepted"
+  }
+]
