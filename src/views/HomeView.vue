@@ -13,9 +13,9 @@ import { RouterLink } from "vue-router";
         </div>
 
         <img
-          src="/src/assets/images/placeholder.png"
+          src="/src/assets/images/nav_logo.png"
           alt="Laptop with characters"
-          class="rounded-2xl w-[50%]"
+          class="rounded-2xl w-[40%]"
         />
       </section>
 

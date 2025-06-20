@@ -16,10 +16,17 @@
     "status": "accepted"
   },
   {
+<<<<<<< HEAD
     "id": 1750362321165,
     "title": "Cypher Setup B site Lotus",
     "description": "Good trips and cam",
     "mediaUrl": "http://localhost:3000/uploads/1750362321056.mp4",
+=======
+    "id": 1750363279713,
+    "title": "Cypher B site Trip + cam",
+    "description": "Split",
+    "mediaUrl": "http://localhost:3000/uploads/1750363279358.mp4",
+>>>>>>> 7972400654217361e4748432369f4b1c3a4b6ecb
     "type": "lineup",
     "status": "accepted"
   }
