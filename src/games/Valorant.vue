@@ -10,6 +10,7 @@ const acceptedLineups = ref([]);
 onMounted(async () => {
   try {
     const response = await axios.get("http://localhost:3000/api/accepted");
+     console.log("ACCEPTED:", response.data);
     acceptedTips.value = response.data.filter((entry) => entry.type === "tip");
     acceptedLineups.value = response.data.filter((entry) => entry.type === "lineup");
   } catch (error) {
@@ -112,17 +113,17 @@ onMounted(async () => {
     </div>
     <div class="w-full md:w-[400px] h-[220px]">
       <video
-        v-if="lineup.mediaUrl.endsWith('.mp4')"
-        :src="lineup.mediaUrl"
-        controls
-        class="w-full h-full rounded-lg object-cover"
-      />
-      <img
-        v-else
-        :src="lineup.mediaUrl"
-        alt="lineup media"
-        class="w-full h-full rounded-lg object-cover"
-      />
+  v-if="lineup.mediaUrl.endsWith('.mp4')"
+  :src="lineup.mediaUrl"
+  controls
+  class="w-full h-full rounded-lg object-cover"
+/>
+<img
+  v-else
+  :src="lineup.mediaUrl"
+  alt="lineup media"
+  class="w-full h-full rounded-lg object-cover"
+/>
     </div>
   </div>
 </div>

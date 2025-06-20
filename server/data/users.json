@@ -4,5 +4,11 @@
     "email": "adminaccount@example.com",
     "passwordHash": "$2b$10$vsXSKsplJsyODs3czmy5DepnS3bTINfrCpP00lO3rRtN1qm25C9Xy",
     "role": "admin"
+  },
+  {
+    "id": 1750359147458,
+    "email": "example@gmail.com",
+    "passwordHash": "$2b$10$o9hPkdRU2zHzjVYvg9HUTOHucAnjpM7L8nobKyJF4KE7REgdQceee",
+    "role": "user"
   }
 ]
